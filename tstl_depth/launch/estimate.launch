@@ -1,0 +1,8 @@
+<launch>
+
+  <include file="$(find xycar_lidar)/launch/lidar_noviewer.launch" />
+
+  <node name="TSTL_Depth" pkg="tstl_depth" type="tstl_depth_node" output="screen"/>
+  <param name="config_calibration_path" type="str" value="$(find tstl_depth)/config/config_calibration.yaml"/>
+
+</launch>
